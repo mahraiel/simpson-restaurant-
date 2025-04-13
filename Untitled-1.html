@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simpson Diner - Dinner Menu</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      overflow-x: hidden;
+    }
+    header {
+      position: relative;
+      width: 100%;
+      height: 60vh;
+      overflow: hidden;
+    }
+    header img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    header h1, header p {
+      position: absolute;
+      left: 20px;
+      color: white;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    }
+    header h1 {
+      bottom: 40px;
+      font-size: 3rem;
+    }
+    header p {
+      bottom: 10px;
+      font-size: 1.5rem;
+    }
+    nav {
+      background-color: rgba(178, 34, 34, 0.8);
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      padding: 1rem;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .container {
+      padding: 2rem;
+    }
+    h2 {
+      text-align: center;
+      color: #8B0000;
+    }
+    .menu-section {
+      margin-top: 3rem;
+    }
+    .note {
+      font-size: 0.95rem;
+      color: #555;
+      font-style: italic;
+      margin-bottom: 1rem;
+    }
+    .menu-title {
+      background-color: #f3e5d8;
+      padding: 1rem;
+      color: #8B0000;
+      font-size: 1.5rem;
+      border-left: 8px solid #b22222;
+      margin-top: 2rem;
+    }
+    .menu-item, .menu-item3 {
+      display: flex;
+      justify-content: space-between;
+      padding: 0.5rem 0;
+      border-bottom: 1px solid #eee;
+      box-sizing: border-box;
+      width: 100%;
+    }
+    .menu-item span.name, .menu-item3 span.name {
+      font-weight: 500;
+    }
+    .menu-item span.price, .menu-item3 span.price {
+      color: #b22222;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="D:\pp\my\Screenshot 2025-04-13 050148.png" alt="Restaurant Image">
+
+    <p>From Steaks to Shakes!</p>
+  </header>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="index.html">Breakfast</a>
+    <a href="Untitled-1.html">Dinner</a>
+    <a href="Untitled-2.html">Contact</a>
+  </nav>
+  <div class="container">
+    <div id="dinner">
+      <h2>Dinner / lunch  Menu</h2>
+
+      <!-- الأقسام السابقة -->
+      <div class="menu-title" id="Soups">🍽️ Appetizers & Snacks
+      </div>
+      <div class="menu-item"><span class="name">Disco Fries</span><span class="price">$7.99</span></div>
+      <p class="note"> Brown gravy and American cheese</p>
+
+      <div class="menu-item"><span class="name">Onion Rings</span><span class="price">$6.99</span></div>
+      <div class="menu-item"><span class="name">Cheddar Bacon Fries</span><span class="price">$8.99</span></div>
+      <div class="menu-item"><span class="name">Clam Strips</span><span class="price">$8.99</span></div>
+      <div class="menu-item"><span class="name">Chicken Tenders (4)</span><span class="price">$8.99</span></div>
+      <div class="menu-item"><span class="name">Mozzarella Sticks (5)</span><span class="price">$7.99</span></div>
+      <div class="menu-item"><span class="name">Appetizer Sampler</span><span class="price">$10.99</span></div>
+      <p class="note">Onion rings, mozzarella sticks & chicken fingers      </p>
+
+      <div class="menu-item"><span class="name">Corn Nuggets</span><span class="price">$7.99</span></div>
+      <div class="menu-item"><span class="name">Buffalo Chicken Tenders</span><span class="price">$8.99</span></div>
+      <div class="menu-title" id="Soups">🍲 Soups</div>
+      <div class="menu-item"><span class="name">Soup of the Day (Cup)</span><span class="price">$3.99</span></div>
+      <div class="menu-item"><span class="name">Soup of the Day (Bowl)</span><span class="price">$4.99</span></div>
+      <div class="menu-item"><span class="name">Chili (Cup)</span><span class="price">$3.99</span></div>
+      <div class="menu-item"><span class="name">Chili (Bowl)</span><span class="price">$4.99</span></div>
+      <div class="menu-item"><span class="name">French Onion Soup (Crock)</span><span class="price">$4.99</span></div>
+      <div class="menu-item"><span class="name">Baked Cheesy Tomato Soup (Crock)</span><span class="price">$5.99</span></div>
+  
+      <div class="menu-title">🍽 Entrees</div>
+      <p class="note">Includes your choice of soup or salad & one side</p>
+      <div class="menu-item"><span class="name">Chicken Tender Platter</span><span class="price">$14.99</span></div>
+      <div class="menu-item"><span class="name">Grilled Chicken Breasts</span><span class="price">$14.99</span></div>
+      <div class="menu-item"><span class="name">Grilled Baby Beef Liver</span><span class="price">$14.99</span></div>
+      <div class="menu-title" id="Salads">🥗 Salads</div>
+      <p class="note">Dressings: Ranch, Diet Ranch, Bleu Cheese, Thousand Island, Italian, Honey Mustard, Balsamic Vinaigrette, French, Greek, Oil & Vinegar, Poppyseed & Caesar.</p>
+      <div class="menu-item"><span class="name">Lettuce Wedge Salad</span><span class="price">$10.99</span></div>
+      <p class="note">Lettuce Wedge Salad 10.99
+        Iceburg lettuce topped with bacon, tomato, onion, blue cheese crumbles & 
+        ranch dressing       </p>
+  <div class="menu-item"><span class="name">Fresh Spinach Salad</span><span class="price">$12.99</span></div>
+  <p class="note">Spinach with bacon, hard boiled egg, tomato & cucumbers  </p>
+  <div class="menu-item"><span class="name">Crispy Chicken Salad</span><span class="price">$14.99</span></div>
+  <p class="note">Crispy tenders, greens, bacon, tomato, hard boiled egg, cucumbers & shredded cheese  </p>
+
+  <div class="menu-item"><span class="name">Crispy Buffalo Chicken Salad</span><span class="price">$14.99</span></div>
+  <p class="note">Crispy Buffalo tenders, greens, tomato, bacon, cucumbers, jalapeno peppers & cheese  </p>
+
+  <div class="menu-item"><span class="name">Grilled Chicken Salad</span><span class="price">$14.99</span></div>
+  <p class="note">Chicken breast, crisp greens, hard boiled egg, tomato & cucumbers  </p>
+
+  <div class="menu-item"><span class="name">Grilled Shrimp Salad</span><span class="price">$14.99</span></div>
+  <p class="note">  Grilled Shrimp, crisp greens, hard boiled egg, tomato & cucumbers  </p>
+
+  <div class="menu-item"><span class="name">Greek Salad</span><span class="price">$12.99</span></div>
+  <p class="note">Crisp greens, feta cheese, tomatoes, cucumbers ,olives, onions, & bell pepper  </p>
+
+  <div class="menu-item"><span class="name">Chef's Salad</span><span class="price">$12.99</span></div>
+  <p class="note">Crisp greens tossed with turkey, ham, cheese, hard boiled egg, tomatoes & cucumbers
+  </p>
+
+  <div class="menu-item"><span class="name">Caesar Salad</span><span class="price">$9.99</span></div>
+  <p class="note">Crispy greens, croutons, parmesan cheese and classic caesar dressing
+  </p>
+
+  <div class="menu-item"><span class="name">Caesar Salad with Chicken</span><span class="price">$14.99</span></div>
+  <div class="menu-title" id="Burgers"> 🍔 Burgers</div>
+  <p class="note">Served with potato chips & pickle  </p>
+  <p class="note">Add Fries 2.99$ </p>
+
+  <div class="menu-item"><span class="name">Hamburger</span><span class="price">$7.99</span></div>
+  <div class="menu-item"><span class="name">Cheeseburger</span><span class="price">$8.99</span></div>
+  <div class="menu-item"><span class="name">Bacon Cheeseburger</span><span class="price">$9.99</span></div>
+  <div class="menu-item"><span class="name">Swiss Mushroom Burger</span><span class="price">$9.99</span></div>
+  <div class="menu-item"><span class="name">Western Burger</span><span class="price">$9.99</span></div>
+  <p class="note">Sauteed onions, mushrooms, bell peppers & cheese  </p>
+<div class="menu-item"><span class="name">Chili Burger</span><span class="price">$11.99</span></div>
+<p class="note">Chili, cheese & onions</p>
+
+<div class="menu-item"><span class="name">Bleu Burger</span><span class="price">$9.99</span></div>
+<p class="note">Bacon & bleu cheese</p>
+
+<div class="menu-item"><span class="name">California Burger</span><span class="price">$9.99</span></div>
+<p class="note">Cheese, lettuce, tomato, onions & Mayo</p>
+<div class="menu-item"><span class="name">Three Cheese Burger</span><span class="price">$9.99</span></div>
+<p class="note">Cheddar, Swiss and American
+</p>
+<div class="menu-title" id="ClubSandwiches">🥓 Classic Club Sandwiches</div>
+<p class="note">Served with chips & slaw </p>
+<div class="menu-item"><span class="name">Turkey Club</span><span class="price">$9.99</span></div>
+<div class="menu-item"><span class="name">Ham & Cheese Club</span><span class="price">$9.99</span></div>
+<div class="menu-item"><span class="name">Tuna Club</span><span class="price">$9.99</span></div>
+<div class="menu-item"><span class="name">Cheeseburger</span><span class="price">$9.99</span></div>
+<div class="menu-item"><span class="name">Roast Beef </span><span class="price">$9.99</span></div>
+<div class="menu-item"><span class="name">BLT
+</span><span class="price">$9.99</span></div>
+<div class="menu-title" id="GrillSandwiches"> 🍔 Sandwich Favorites From The Grill</div>
+<p class="note">All sandwiches served with chips & slaw</p>
+<p class="note">Add Fries to any 
+  Sandwich 2.99$</p>
+
+<div class="menu-item"><span class="name"> patty melt </span><span class="price">$9.99</span></div>
+<div class="menu-item"><span class="name"> French Dip</span><span class="price">$9.99</span></div>
+<div class="menu-item"><span class="name">Philly Cheesesteak</span><span class="price">$9.99</span></div>
+<div class="menu-item"><span class="name">Monte Cristo
+</span><span class="price">$9.99</span></div>
+<div class="menu-item"><span class="name">Reuben
+</span><span class="price">$9.99</span></div>
+<div class="menu-item"><span class="name">Rachel</span><span class="price">$9.99</span></div>
+<div class="menu-title" id="TastySandwiches"> Tasty Sandwiches</div>
+<p class="note">Served with Chips & Pickle</p>
+<div class="menu-item"><span class="name">Cold Meat Loaf</span><span class="price">$7.99</span></div>
+<div class="menu-item"><span class="name">Cold Turkey</span><span class="price">$7.99</span></div>
+<div class="menu-item"><span class="name">Cold Ham & Cheese</span><span class="price">$7.99</span></div>
+<div class="menu-item"><span class="name">Tuna Salad</span><span class="price">$7.99</span></div>
+<div class="menu-item"><span class="name">Fried Fish</span><span class="price">$8.99</span></div>
+<div class="menu-item"><span class="name">Jumbo Hot Dog</span><span class="price">$4.99</span></div>
+<div class="menu-item"><span class="name">Chili Dog</span><span class="price">$6.99</span></div>
+<div class="menu-item"><span class="name">BLT</span><span class="price">$7.99</span></div>
+<div class="menu-item"><span class="name">Grilled Cheese</span><span class="price">$6.99</span></div>
+<div class="menu-item"><span class="name">Grilled Ham & Cheese</span><span class="price">$7.99</span></div>
+
+<div class="menu-title" id="Extras">➕ SANDWICH EXTRAS</div>
+<div class="menu-item"><span class="name">Cheese</span><span class="price">$1.50</span></div>
+<div class="menu-item"><span class="name">Tomato</span><span class="price">$1.50</span></div>
+<div class="menu-item"><span class="name">Onion</span><span class="price">$1.50</span></div>
+<div class="menu-item"><span class="name">Bagel</span><span class="price">$1.99</span></div>
+<div class="menu-item"><span class="name">Croissant</span><span class="price">$1.99</span></div>
+<div class="menu-item"><span class="name">Add An Egg</span><span class="price">$1.99</span></div>
+<div class="menu-title" id="Croissantwiches">🥐 Croissantwiches</div>
+<p class="note">Served with French Fries & 
+  Pickle. Dressed with lettuce, 
+  tomato & mayo</p>
+<div class="menu-item"><span class="name">Turkey </span><span class="price">$10.99</span></div>
+<div class="menu-item"><span class="name">Ham & Cheese
+</span><span class="price">$10.99</span></div>
+<div class="menu-item"><span class="name">Tuna</span><span class="price">$10.99</span></div>
+<div class="menu-title" id="Subs"> 🥖Subs</div>
+<div class="menu-item"><span class="name">Philly Cheesesteak
+</span><span class="price">$10.99</span></div>
+<div class="menu-item"><span class="name">Chicken Philly Cheesesteak
+</span><span class="price">$10.99</span></div>
+<div class="menu-item"><span class="name">Meatball & Cheese
+</span><span class="price">$10.99</span></div>
+<div></div>
+<div class="menu-title" id="Gyros"> 🥙Gyros</div>
+<p class="note">Served with French Fries & pickle</p>
+<div class="menu-item"><span class="name">Beef </span><span class="price">$10.99</span></div>
+<div class="menu-item"><span class="name">Chicken </span><span class="price">$10.99</span></div>
+<div class="menu-title" id="Wraps">🌯 Wraps</div>
+<p class="note"> Served with Chips & Pickle</p>
+<div class="menu-item"><span class="name">Tuna Wrap</span><span class="price">$10.99</span></div>
+<div class="menu-item"><span class="name">Cheeseburger Wrap</span><span class="price">$10.99</span></div>
+<div class="menu-item"><span class="name">Buffalo Chicken Wrap</span><span class="price">$10.99</span></div>
+<div class="menu-item"><span class="name">Chicken Ranch Wrap</span><span class="price">$10.99</span></div>
+<div class="menu-item"><span class="name">BLT Wrap</span><span class="price">$10.99</span></div>
+<div class="menu-item"><span class="name">Turkey Wrap</span><span class="price">$10.99</span></div>
+<div class="menu-item"><span class="name">Ham & Swiss Wrap</span><span class="price">$10.99</span></div>
+<div class="menu-item"><span class="name">Philly Cheesesteak Wrap</span><span class="price">$10.99</span></div>
+
+<div class="menu-title" id="Quesadillas">🫓 Quesadillas</div>
+<p class="note"> Served with sour cream & salsa</p>
+<div class="menu-item"><span class="name">Chicken Bacon Ranch</span><span class="price">$10.99</span></div>
+<div class="menu-item"><span class="name">Buffalo Chicken</span><span class="price">$10.99</span></div>
+<div class="menu-item"><span class="name">Steak</span><span class="price">$10.99</span></div>
+<div class="menu-item"><span class="name">Vegetable</span><span class="price">$10.99</span></div>
+<div class="menu-item"><span class="name">Philly Cheesesteak</span><span class="price">$10.99</span></div>
+<div class="menu-item"><span class="name">Three Cheese</span><span class="price">$10.99</span></div>
+<div class="menu-title" id="Panini">🥪Panini</div>
+
+<div class="menu-item"><span class="name">Cordon Blue Panini</span><span class="price">$11.99</span></div>
+<p class="description">Grilled chicken breast with ham, swiss cheese</p>
+
+<div class="menu-item"><span class="name">Club Panini</span><span class="price">$11.99</span></div>
+<p class="description">Turkey breast, ham, bacon, honey mustard</p>
+
+<div class="menu-item"><span class="name">Louisiana Panini</span><span class="price">$11.99</span></div>
+<p class="description">Grilled chicken, sautéed onion, tomato, mozzarella cheese</p>
+
+<div class="menu-item"><span class="name">Gyro Panini</span><span class="price">$11.99</span></div>
+<p class="description">Chicken or beef, feta cheese, tomato, tzatziki sauce</p>
+
+<div class="menu-item"><span class="name">Chicken Parmigiana Panini</span><span class="price">$11.99</span></div>
+<p class="description">Chicken tender with tomato sauce and mozzarella cheese</p>
+
+<div class="menu-item"><span class="name">Ruben Panini</span><span class="price">$11.99</span></div>
+<p class="description">Corned beef, sauerkraut, swiss cheese with thousand island dressing</p>
+<div class="menu-title" id="OpenFaced">🥪 Open Faced Sandwiches</div>
+<p class="note">Served with choice of soup or salad & one vegetable</p>
+
+<div class="menu-item"><span class="name">Turkey</span><span class="price">$14.99</span></div>
+<div class="menu-item"><span class="name">Roast Beef</span><span class="price">$14.99</span></div>
+<div class="menu-item"><span class="name">Meatloaf</span><span class="price">$14.99</span></div>
+
+<div class="menu-title" id="Baskets">🍽 Baskets</div>
+<p class="note">Served with French Fries & pickle</p>
+
+<div class="menu-item"><span class="name">Fish</span><span class="price">$12.99</span></div>
+<div class="menu-item"><span class="name">Chicken Tenders</span><span class="price">$12.99</span></div>
+<div class="menu-item"><span class="name">Clam Strips</span><span class="price">$12.99</span></div>
+<div class="menu-item"><span class="name">Shrimp</span><span class="price">$12.99</span></div>
+<div class="menu-title" id="ChickenSandwiches">🍗 Chicken Sandwiches</div>
+<p class="note">Served with French Fries and Coleslaw</p>
+
+<div class="menu-item"><span class="name">Grilled Chicken Breast</span><span class="price">$12.99</span></div>
+<p class="description">Lettuce, Tomato & Mayo on a toasted roll</p>
+
+<div class="menu-item"><span class="name">Philly Style Chicken Cheesesteak</span><span class="price">$12.99</span></div>
+<p class="description">Sautéed onions, mushrooms & cheese</p>
+
+<div class="menu-item"><span class="name">Barbecue Chicken</span><span class="price">$12.99</span></div>
+<p class="description">Grilled chicken smothered with classic B.B.Q. sauce & topped with bacon & cheese</p>
+
+<div class="menu-item"><span class="name">Crispy Chicken</span><span class="price">$12.99</span></div>
+<p class="description">Lettuce, tomato, bacon, cheese and honey mustard dressing</p>
+
+<div class="menu-item"><span class="name">Chicken Romano</span><span class="price">$12.99</span></div>
+<p class="description">Grilled chicken, fresh spinach, tomato & Provolone cheese</p>
+
+<div class="menu-item"><span class="name">Texas Chicken</span><span class="price">$12.99</span></div>
+<p class="description">Grilled chicken, bacon with cheddar cheese</p>
+
+<div class="menu-title" id="Sides">🍽️ Sides</div>
+<p class="note">Each side for $3.99</p>
+
+<div class="menu-item"><span class="name">French Fries</span><span class="price">$3.99</span></div>
+<div class="menu-item"><span class="name">Tator Tots</span><span class="price">$3.99</span></div>
+<div class="menu-item"><span class="name">Mashed Potatoes</span><span class="price">$3.99</span></div>
+<div class="menu-item"><span class="name">Baked Potato</span><span class="price">$3.99</span></div>
+<div class="menu-item"><span class="name">Sweet Potato Fries</span><span class="price">$3.99</span></div>
+<div class="menu-item"><span class="name">Applesauce</span><span class="price">$3.99</span></div>
+<div class="menu-item"><span class="name">Coleslaw</span><span class="price">$3.99</span></div>
+<div class="menu-item"><span class="name">Cucumber Salad</span><span class="price">$3.99</span></div>
+<div class="menu-item"><span class="name">Filling</span><span class="price">$3.99</span></div>
+<div class="menu-item"><span class="name">Cottage Cheese</span><span class="price">$3.99</span></div>
+<div class="menu-item"><span class="name">Rice</span><span class="price">$3.99</span></div>
+<div class="menu-item"><span class="name">Home Fries</span><span class="price">$3.99</span></div>
+<div class="menu-item"><span class="name">Hot Veggie of the Day</span><span class="price">$3.99</span></div>
+<div class="menu-item"><span class="name">Pickled Beets</span><span class="price">$3.99</span></div>
+<div class="menu-title" id="Entrees">🍽️ Entrees</div>
+<p class="note">Includes your choice of soup or salad & one side</p>
+
+<div class="menu-item"><span class="name">Roast Turkey</span><span class="price">$15.99</span></div>
+<p class="description">Served over filling with gravy</p>
+
+<div class="menu-item"><span class="name">Roast Beef</span><span class="price">$15.99</span></div>
+<p class="description">Served over filling with gravy</p>
+
+<div class="menu-item"><span class="name">Breaded Veal Patty</span><span class="price">$15.99</span></div>
+<p class="description">With gravy or tomato sauce</p>
+
+<div class="menu-item"><span class="name">Grilled Ham Steak</span><span class="price">$15.99</span></div>
+
+<div class="menu-item"><span class="name">Baked Meat Loaf</span><span class="price">$15.99</span></div>
+
+<div class="menu-item"><span class="name">Chicken Tender Platter</span><span class="price">$14.99</span></div>
+
+<div class="menu-item"><span class="name">Grilled Chicken Breasts</span><span class="price">$14.99</span></div>
+
+<div class="menu-item"><span class="name">Grilled Baby Beef Liver</span><span class="price">$14.99</span></div>
+<p class="description">Served with grilled onions & gravy</p>
+
+<div class="menu-title" id="Seafood">🐟 Seafood</div>
+<p class="note">Includes choice of soup or salad & one side</p>
+
+<div class="menu-item"><span class="name">Broiled Haddock</span><span class="price">$18.00</span></div>
+
+<div class="menu-item"><span class="name">Fried Haddock</span><span class="price">$18.00</span></div>
+
+<div class="menu-item"><span class="name">Broiled Flounder</span><span class="price">$17.00</span></div>
+
+<div class="menu-item"><span class="name">Broiled Tilapia</span><span class="price">$17.00</span></div>
+
+<div class="menu-item"><span class="name">Broiled Stuffed Shrimp</span><span class="price">$20.00</span></div>
+
+<div class="menu-item"><span class="name">Broiled Scallops</span><span class="price">$18.00</span></div>
+
+<div class="menu-item"><span class="name">Jumbo Lump Crab Cakes</span><span class="price">$18.00</span></div>
+
+<div class="menu-item"><span class="name">Stuffed Mushrooms with Crab Cakes</span><span class="price">$19.00</span></div>
+<div class="menu-item"><span class="name">Broiled Seafood Combo</span><span class="price">$23.00</span></div>
+<p class="description">Haddock, Shrimp & Crab Cake</p>
+<div class="menu-title" id="SteakChops">🥩 Steak & Chops</div>
+<p class="note">Includes choice of soup or salad & one side</p>
+
+<div class="menu-item"><span class="name">Grilled Chop Steak</span><span class="price">$15.99</span></div>
+<p class="description">Served with sautéed onions & gravy</p>
+
+<div class="menu-item"><span class="name">Country Fried Steak</span><span class="price">$15.99</span></div>
+<p class="description">Served with white or brown gravy</p>
+
+<div class="menu-item"><span class="name">Pork Chops</span><span class="price">$15.99</span></div>
+<p class="description">Grilled to perfection</p>
+
+<div class="menu-item"><span class="name">N. Y. Strip Steak</span><span class="price">$21.99</span></div>
+<p class="description">Grilled to order</p>
+<div class="menu-title" id="StirFry">🍜 Stir Fry</div>
+
+<div class="menu-item"><span class="name">Chicken Stir Fry</span><span class="price">$15.99</span></div>
+
+<div class="menu-item"><span class="name">Shrimp Stir Fry</span><span class="price">$17.55</span></div>
+<div class="menu-title" id="ItalianSpecialties">🍝 Italian Specialties</div>
+<p class="note">Includes choice of Soup or Salad & Garlic Bread</p>
+
+<div class="menu-item"><span class="name">Chicken Carbonara</span><span class="price">$18.00</span></div>
+<p class="description">With ham, bacon, tomato tossed in Alfredo sauce</p>
+
+<div class="menu-item"><span class="name">Spaghetti with Meatballs</span><span class="price">$13.99</span></div>
+
+<div class="menu-item"><span class="name">Veal Parmigiana</span><span class="price">$16.99</span></div>
+
+<div class="menu-item"><span class="name">Chicken Parmigiana</span><span class="price">$15.99</span></div>
+
+<div class="menu-item"><span class="name">Cheese Ravioli</span><span class="price">$14.99</span></div>
+
+<div class="menu-item"><span class="name">Eggplant Parmigiana</span><span class="price">$14.99</span></div>
+
+<div class="menu-item"><span class="name">Baked Lasagna</span><span class="price">$16.99</span></div>
+
+<div class="menu-item"><span class="name">Fettuccini Alfredo</span><span class="price">$14.00</span></div>
+
+<div class="menu-item"><span class="name">Chicken Alfredo</span><span class="price">$17.00</span></div>
+
+<div class="menu-item"><span class="name">Shrimp Alfredo</span><span class="price">$18.00</span></div>
+
+<div class="menu-item"><span class="name">Chicken Marsala</span><span class="price">$18.00</span></div>
+<p class="description">Fresh mushrooms and Marsala wine served over rice or linguini</p>
+
+<div class="menu-item"><span class="name">Chicken Scampi</span><span class="price">$18.00</span></div>
+<p class="description">Sautéed with garlic white wine over rice or linguini</p>
+
+<div class="menu-item"><span class="name">Shrimp Scampi</span><span class="price">$19.00</span></div>
+<p class="description">Sautéed with garlic and white wine over rice or linguini</p>
+
+<div class="menu-item"><span class="name">Seafood Blush</span><span class="price">$20.00</span></div>
+<p class="description">Sautéed shrimp, scallops, mushrooms, garlic in light Alfredo marinara sauce over linguini</p>
+
+<div class="menu-item"><span class="name">Manicotti Parmigiana</span><span class="price">$13.99</span></div>
+
+<div class="menu-item"><span class="name">Stuffed Shell Parmigiana</span><span class="price">$13.99</span></div>
+<div class="menu-title" id="Beverages">🍹 Beverages</div>
+<p class="note">Complimentary refill on Coffee, Tea, Iced Tea & Soda</p>
+
+<div class="menu-item"><span class="name">Coffee or Tea (Regular or Decaf)</span><span class="price">$2.25</span></div>
+
+<div class="menu-item"><span class="name">French Vanilla</span><span class="price">$2.75</span></div>
+
+<div class="menu-item"><span class="name">Hot Chocolate</span><span class="price">$2.75</span></div>
+
+<div class="menu-item"><span class="name">White or Chocolate Milk</span><span class="price">SM $2.50 LG $2.99</span></div>
+
+<div class="menu-item"><span class="name">Soft Drinks</span><span class="price">$2.50</span></div>
+
+<div class="menu-item"><span class="name">Iced Tea</span><span class="price">$2.50</span></div>
+
+<div class="menu-item"><span class="name">Juices</span><span class="price">SM $2.50 LG $3.25</span></div>
+<p class="description">Tomato, Orange, Cranberry or Apple</p>
+
+<div class="menu-title" id="DessertsIceCream">🍨 Desserts & Ice Cream</div>
+<p class="note">Ask for our daily selections</p>
+
+<div class="menu-item"><span class="name">Cake</span><span class="price">$5.99</span></div>
+
+<div class="menu-item"><span class="name">Pie</span><span class="price">$5.99</span></div>
+
+<div class="menu-item"><span class="name">Ice Cream</span><span class="price">One Scoop $2.99 Two Scoops $4.99</span></div>
+
+<div class="menu-item"><span class="name">Milkshakes</span><span class="price">$6.95</span></div>
+
+<div class="menu-item"><span class="name">Ice Cream Float</span><span class="price">$5.99</span></div>
+
+      <div class="menu-title">👵 Senior Citizens Meals</div>
+      <p class="note">For Seniors 60 Years of Age or Older • Served with soup or salad & one side</p>
+      <div class="menu-item"><span class="name">Roast Turkey Over Filling with Gravy</span><span class="price">$13.99</span></div>
+      <div class="menu-item"><span class="name">Roast Beef Over Filling with Gravy</span><span class="price">$13.99</span></div>
+      <div class="menu-item"><span class="name">Liver & Onions</span><span class="price">$13.99</span></div>
+      <div class="menu-item"><span class="name">Grilled Chicken Breast</span><span class="price">$13.99</span></div>
+      <div class="menu-item"><span class="name">Broiled Haddock</span><span class="price">$13.99</span></div>
+      <div class="menu-item"><span class="name">Crab Cake</span><span class="price">$13.99</span></div>
+      <div class="menu-item"><span class="name">Spaghetti & Meatballs</span><span class="price">$13.99</span></div>
+      <div class="menu-item"><span class="name">Pork Chop</span><span class="price">$13.99</span></div>
+      <div class="menu-item"><span class="name">Ham Steak</span><span class="price">$13.99</span></div>
+      <div class="menu-item"><span class="name">Chopped Steak with Onions & Gravy</span><span class="price">$13.99</span></div>
+      <div class="menu-item"><span class="name">Meat Loaf</span><span class="price">$13.99</span></div>
+   
+      <div class="menu-item"><span class="name">Ranch, Diet Ranch, Bleu cheese, Thousand Island, Italian, Honey Mustard, 
+        Balsamic Vinaigrette, French, Greek, Oil & Vinegar, Poppyseed & Caesar.</span><span class="price"></span></div>
+      <div class="menu-title">👶KIDS Menu</div>
+      <p class="note">For Ages 12 & Under • Served with a small beverage & french fries</p>
+      <div class="menu-item"><span class="name">Grilled Cheese</span><span class="price">$8.99</span></div>
+      <div class="menu-item"><span class="name">Chicken Tenders</span><span class="price">$8.99</span></div>
+      <div class="menu-item"><span class="name">Cheeseburger</span><span class="price">$8.99</span></div>
+      <div class="menu-item"><span class="name">Fried Fish</span><span class="price">$8.99</span></div>
+      <div class="menu-item"><span class="name">Hot Dog</span><span class="price">$8.99</span></div>
+      <div class="menu-item"><span class="name">Spaghetti with Meatball (no fries)</span><span class="price">$8.99</span></div>
+    </div>
+  </div>
+</body>
+</html>

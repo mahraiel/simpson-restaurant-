@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simpson Diner</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      overflow-x: hidden;
+    }
+
+    header {
+      position: relative;
+      width: 100%;
+      height: 100vh; /* تجعل الصورة تأخذ كامل الشاشة */
+      overflow: hidden;
+    }
+
+    header img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* تجعل الصورة تغطي كامل المساحة */
+      position: absolute;
+      top: 0;
+      left: 0;
+      animation: moveImage 3s ease-in-out forwards;
+    }
+
+    .menu-item {
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #eee;
+}
+
+.menu-item h4 {
+  margin: 0;
+}
+
+.menu-item .price {
+  color: red;
+  font-weight: bold;
+}
+
+
+    header h1 {
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      font-size: 3rem;
+      color: white;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    }
+
+    header p {
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      font-size: 1.5rem;
+      color: white;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    }
+
+    nav {
+      background-color: rgba(178, 34, 34, 0.8); /* استخدم لون مع شفافية لتفادي اختفاء النص */
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      padding: 1rem;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .container {
+      padding: 2rem;
+    }
+
+    h2 {
+      text-align: center;
+      color: #8B0000;
+    }
+
+    .menu-section {
+      margin-top: 3rem;
+    }
+    .note {
+  font-size: 0.95rem; /* حجم الخط أصغر قليلاً */
+  color: #555; /* لون النص (اختياري) */
+  font-style: italic; /* لجعل النص مائل */
+  margin-bottom: 1rem; /* المسافة بين الملاحظة والعناصر التالية */
+}
+
+    .menu-title {
+      background-color: #f3e5d8;
+      padding: 1rem;
+      color: #8B0000;
+      font-size: 1.5rem;
+      border-left: 8px solid #b22222;
+      margin-top: 2rem;
+    }
+
+    .menu-item {
+      display: flex;
+      justify-content: space-between;
+      padding: 0.5rem 0;
+      border-bottom: 1px solid #eee;
+    }
+    .menu-item3{
+      display: flex;
+      justify-content: space-between;
+      padding: 0.5rem 0;
+     
+    } 
+    menu-item3 span.name {
+      font-weight: 500;
+    }
+    .menu-item3 {
+  width: 100%; /* تأكد من أن العناصر لا تخرج عن الحاوية */
+  box-sizing: border-box; /* للتأكد من أن الحشو والهامش يتم احتسابه في عرض العنصر */
+}
+    .menu-item3 span.price {
+      color: #b22222;
+      font-weight: bold;
+    }
+    .menu-item3 span.name {
+      font-weight: 500;
+    }
+
+    .menu-item span.name {
+      font-weight: 500;
+    }
+    .menu-item {
+  width: 100%; /* تأكد من أن العناصر لا تخرج عن الحاوية */
+  box-sizing: border-box; /* للتأكد من أن الحشو والهامش يتم احتسابه في عرض العنصر */
+}
+    .menu-item span.price {
+      color: #b22222;
+      font-weight: bold;
+    }
+
+  </style>
+</head>
+<body>
+  <header>
+    <img src="D:\pp\my\Screenshot 2025-04-13 050148.png" alt="Restaurant Image">
+
+    <p>From Steaks to Shakes!</p>
+  </header>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="index.html">Breakfast</a>
+    <a href="Untitled-1.html">Dinner</a>
+    <a href="Untitled-2.html">Contact</a>
+  </nav>
+
+  <div class="container">
+    <div id="home">
+      <h2>Welcome to the Simpson Diner</h2>
+      <p style="text-align:center; color:#555">Classic American food served with love.</p>
+    </div>
+
+    <div class="menu-section" id="breakfast">
+      <div class="menu-title">🍳 Breakfast</div>
+      <div class="menu-item"><span class="name">Two Eggs (Any Style)</span><span class="price">$5.50</span></div>
+      <div class="menu-item"><span class="name">Two Eggs With Ham</span><span class="price">$8.95</span></div>
+      <div class="menu-item"><span class="name">Two Eggs With Sausage</span><span class="price">$8.95</span></div>
+      <div class="menu-item"><span class="name">Two Eggs With Bacon</span><span class="price">$8.95</span></div>
+      <div class="menu-item"><span class="name">Two Eggs With Scrapple</span><span class="price">$8.95</span></div>
+      <div class="menu-item"><span class="name">Two Eggs With Canadian Bacon</span><span class="price">$8.95</span></div>
+      <div class="menu-item"><span class="name">Two Eggs With Corned Beef Hash</span><span class="price">$8.95</span></div>
+      <div class="menu-item"><span class="name">Egg Whites or Egg Beaters 1.99 Extra </span><span class="price"></span></div>
+
+      <div class="menu-title">Steak & Eggs</div>
+
+<!-- ملاحظة في بداية القسم -->
+<p class="note"> All steak and egg combinations are served with hash browns and toast.</p>
+
+<div class="menu-item"><span class="name">Two Eggs With NY Strip Steak</span><span class="price">$15.99</span></div>
+<div class="menu-item"><span class="name">Two Eggs With Chopped Steak</span><span class="price">$15.99</span></div>
+<div class="menu-item"><span class="name">Two Eggs With Grilled Ham Steak</span><span class="price">$15.99</span></div>
+<div class="menu-item"><span class="name">Two Eggs With Country Fried Steak</span><span class="price">$15.99</span></div>
+
+      <div class="menu-title">Big & Tall</div>
+      <div class="menu-item"><span class="name">Two eggs, home fries, tator tots or grits, choice of bacon, ham or sausage and either two pancakes or French toast</span><span class="price">$12.99</span></div>
+
+      <div class="menu-title">Country Fries</div>
+      <div class="menu-item"><span class="name">Three eggs scrambled with green pepper, onion and home fries. Served with toast & jelly</span><span class="price">$9.99</span></div>
+    </div>
+    <div class="menu-title">Awesome Omelettes</div>
+
+<!-- ملاحظة في بداية القسم -->
+<p class="note">Made with three eggs. Served with home fries, tator tots, grits or toast & jelly.</p>
+
+<div class="menu-item"><span class="name">Western Cheese Omelette</span><span class="price">$9.99</span></div>
+<div class="menu-item"><span class="name">Ham & Cheese Omelette</span><span class="price">$9.99</span></div>
+<div class="menu-item"><span class="name">Bacon & Cheese Omelette</span><span class="price">$9.99</span></div>
+<div class="menu-item"><span class="name">Sausage & Cheese Omelette</span><span class="price">$9.99</span></div>
+<div class="menu-item"><span class="name">Mushroom & Cheese Omelette</span><span class="price">$9.99</span></div>
+<div class="menu-item"><span class="name">Mediterranean & Feta Cheese Omelette
+  With Onions, Tomatoes & Green Peppers</span><span class="price">$9.99</span></div>
+<div class="menu-item"><span class="name">Spinach & Feta Cheese Omelette</span><span class="price">$9.99</span></div>
+<div class="menu-item"><span class="name">Meat Lovers & Cheese Omelette</span><span class="price">$9.99</span></div>
+<div class="menu-item"><span class="name">Cheese Steak Omelette</span><span class="price">$9.99</span></div>
+<div class="menu-item"><span class="name">Three Cheese Omelette</span><span class="price">$9.99</span></div>
+<div class="menu-item"><span class="name">Italian & Cheese Omelette "Sausage, onions & peppers"</span><span class="price">$9.99</span></div>
+<div class="menu-item"><span class="name">Veggie & Cheese Omelette "Mushrooms, peppers, onions & broccoli"</span><span class="price">$9.99</span></div>
+  <div class="menu-item"><span class="name">Alpine Cheese Omelette " Crispy bacon & mushroom"</span><span class="price">$9.99</span></div>
+  <div class="menu-item"><span class="name">House Cheese Omelette "Sausage, ham, onions & pepper"</span><span class="price">$9.99</span></div>
+  <div class="menu-item"><span class="name">Cheese Omelette </span><span class="price">$6.99</span></div>
+  <div class="menu-item"><span class="name">Bread SubstitutionsBagel " Biscuit, English Muffin or Raisin Toast "</span><span class="price">$1.50</span></div>
+  <div class="menu-title">Healthy Choice Omelettes</div>
+
+  <!-- ملاحظة في بداية القسم -->
+  <p class="note">Served with Toast & a fruit cup or applesauce</p>
+  
+  <div class="menu-item"><span class="name">Egg whites, spinach & tomato </span><span class="price">$10.99</span></div>
+  <div class="menu-item"><span class="name">Egg whites, turkey & tomato</span><span class="price">$10.99</span></div>
+  <div class="menu-title">EXTRAS</div>
+  
+    <div class="menu-item"><span class="name">Cheese ◆ Tomato ◆ Sautéed Onions ◆ Green Peppers ◆ Mushrooms </span><span class="price">$1.00 each</span></div>
+    <div class="menu-item"><span class="name">Extra Egg </span><span class="price">$1.59 each</span></div>
+    <div class="menu-title">2.2.2</div>
+
+    <div class="menu-item"><span class="name">Two pankcakes, two eggs any style, two slices of bacon </span><span class="price">$10.99 each</span></div>
+    <div class="menu-title">Breakfast Garbage </div>
+  
+    <div class="menu-item"><span class="name">Three eggs mixed in potato with all veggies and meats, topped with cheddar cheese
+    </span><span class="price">$13.99 each</span></div>
+    <div class="menu-title">Breakfst Monte Cristo </div>
+
+      <div class="menu-item"><span class="name">Grilled ham, turkey, over hard eggs melted swiss cheese inside french toast. Served with home fries, tator 
+      </span><span class="price">$11.99 each</span></div>
+
+      
+      <div class="menu-title">Benedicts</div>
+      <p class="note">Served with home fries, grits or tator tots  </p>
+
+      <div class="menu-item"><span class="name">Classic - "Two perfectly poached eggs atop an English muffin & 
+        Canadian bacon topped with Hollandaise sauce"</span><span class="price">$10.99</span></div>
+        <div class="menu-item"><span class="name">Scrapple - "Two perfectly poached eggs atop an English muffin & 
+          scrapple topped with Hollandaise sauce"</span><span class="price">$10.99</span></div>
+          <div class="menu-item"><span class="name">Sausage - "Two perfectly poached eggs atop an English muffin & 
+            sausage topped with Hollandaise sauce"</span><span class="price">$10.99</span></div>
+      <div class="menu-title">From the Griddle </div>
+      <p class="note">Served with Butter & Syrup</p>
+      <div class="menu-title">1.1Pancakes </div>
+       <div class="menu-item3"><span class="name">Pancake</span><span class="price">two 5.99...............three 6.99</span></div>
+        <div class="menu-item3"><span class="name"style="padding-left: 5px;">with ham, bacon or sausage</span><span class="price">two 7.99...............three 9.99</span></div>
+        <div class="menu-item"><span class="name"style="padding-left: 5px;">with Canadian bacon, scrapple</span><span class="price">two 8.49...............three 9.99</span></div>
+        
+        <div class="menu-item"><span class="name">Blueberry Pancakes</span><span class="price">two 7.50...............three 8.99</span></div>
+        <div class="menu-item"><span class="name">Chocolate Chip</span><span class="price">two 7.50...............three 8.99</span></div>
+        <div class="menu-item"><span class="name">Banana Walnut</span><span class="price"> two 7.99...............three 9.99</span></div>
+        <div class="menu-item"><span class="name">Strawberry</span><span class="price">two 7.99...............three 9.99</span></div>
+        
+        
+        <div class="menu-title">1.2 French Toast </div>
+        <div class="menu-item3"><span class="name">French Toast</span><span class="price">two 5.99...............three 6.99</span></div>
+        <div class="menu-item3"><span class="name" style="padding-left: 5px;">   with ham, bacon or sausage Canadian bacon, scrapple  </span> <span class="price">two 7.99...............three 9.99</span></div>
+        <div class="menu-item"><span class="name"style="padding-left: 5px;">    with Canadian bacon, scrapple  </span> <span class="price">two 7.99...............three 9.99</span></div>
+
+        <div class="menu-item"><span class="name">Strawberry French Toast</span><span class="price">two 7.99...............three 9.99</span></div>
+        <div class="menu-item"><span class="name">Raisin Bread French Toast</span><span class="price">three 8.99</span></div>  
+       <div class="menu-title">Belgian Waffles </div>
+
+      <p class="note">Served until 1:00pm</p>
+      <div class="menu-item3"><span class="name"style="padding-left: 5px;">Belgian Waffle</span><span class="price">7.25</span></div>
+        <div class="menu-item3"><span class="name"style="padding-left: 5px;" >With Chipped Beef or Sausage Gravy </span><span class="price">9.25</span></div>
+        <div class="menu-item"><span class="name"> With Bacon, Ham, Sausage or Scrapple </span><span class="price">9.25</span></div>
+        <div class="menu-item"><span class="name"> Fruit Waffle </span><span class="price">9.25</span></div>
+        <div class="menu-item"><span class="name"> Ice Cream Waffle  </span><span class="price">9.25</span></div>
+       
+
+        <div class="menu-title">Wraps </div>
+        <p class="note">Made with 3 eggs and choice of home fries, grits or tator tots.</p>
+
+        <div class="menu-item"><span class="name">Western Cheese</span><span class="price">10.25</span></div>
+        <div class="menu-item"><span class="name">Cheesesteak    </span><span class="price">10.25</span></div>
+        <div class="menu-item"><span class="name">Bacon Cheese </span><span class="price">10.25</span></div>
+        <div class="menu-item"><span class="name">Ham & Cheese        </span><span class="price">10.25</span></div>
+        <div class="menu-item"><span class="name">Sausage & Cheese        </span><span class="price">10.25</span></div>
+        <div class="menu-item"><span class="name">Mushroom & Cheese
+        </span><span class="price">10.25</span></div>
+        <div class="menu-item"><span class="name">Meat Lovers & Cheese      </span><span class="price">10.25</span></div>
+        <div class="menu-title">Stuffed French Toast </div>
+        <div class="menu-item"><span class="name">French toast stuffed with cream cheese & topped with fruit filling and whipped cream</span><span class="price">9.99</span></div>
+        <div class="menu-item"><span class="name">Banana Walnut, Strawberry or Blueberry   </span><span class="price">9.55</span></div>
+        <div class="menu-title">Breakfast Sammies </div>
+        <p class="note">Prepared with two eggs on toasz Add 1.25 for bagel,English Muffin or croissant</p>
+
+        <div class="menu-item"><span class="name">Egg & Cheese</span><span class="price">4.99</span></div>
+        <div class="menu-item"><span class="name">Egg, Ham & Cheese 
+        </span><span class="price">6.49 </span></div>
+        <div class="menu-item"><span class="name">          Egg, Bacon & Cheese       </span><span class="price"> 6.49 </span></div>
+        <div class="menu-item"><span class="name">          Egg, Sausage & Cheese 
+        </span><span class="price">6.49</span></div>
+        <div class="menu-item"><span class="name">  Western Egg & Cheese    </span><span class="price">6.49 </span></div>
+        <div class="menu-title"> Side Orders</div>
+
+        <div class="menu-item"><span class="name">Bacon, Ham or Sausage</span><span class="price">3.75</span></div>
+        <div class="menu-item"><span class="name">Canadian Bacon or Turkey Sausage
+        </span><span class="price">3.99 </span></div>
+        <div class="menu-item"><span class="name">         Scrapple      </span><span class="price"> 6.49 </span></div>
+        <div class="menu-item"><span class="name">Cup of Chipped Beef or Sausage Gravy
+        </span><span class="price">3.99</span></div>
+        <div class="menu-item"><span class="name">  Corned Beef Hash   </span><span class="price">4.99 </span></div>
+     
+        <div class="menu-item"><span class="name">  Corned Beef Hash   </span><span class="price">4.99 </span></div>
+        <div class="menu-item"><span class="name">  Home Fries or Tator Tots  </span><span class="price">3.50 </span></div>
+        <div class="menu-item"><span class="name">  Fruit Cup  </span><span class="price">3.99 </span></div>
+        <div class="menu-item"><span class="name">  Grits </span><span class="price">3.99 </span></div>
+
+        <div class="menu-title"> Beverages</div>
+        <div class="menu-item"><span class="name">Coffee or Tea (Regular or Decaf)</span><span class="price">2.25</span></div>
+        <div class="menu-item"><span class="name">Hot Chocolate 
+        </span><span class="price">2.75</span></div>
+        <div class="menu-item"><span class="name"> White or Chocolate Milk</span><span class="price">  SM 2.50...LG 2.99 </span></div>
+        <div class="menu-item"><span class="name">Soft Drinks
+        </span><span class="price">2.50</span></div>
+        <div class="menu-item"><span class="name">  Iced Tea  </span><span class="price">2.50 </span></div>
+     
+        <div class="menu-item3"><span class="name"> Juices</span><span class="price"> SM 2.50...LG 3.25</span></div>
+        <div class="menu-item"><span class="name" style="padding-left: 5px;">  Tomato, Orange, Cranberry or Apple  </div>
+        <div class="menu-item"><span class="name" style="color: #8B0000;"> Complimentary Refill on Coffee, 
+          Tea, Iced Tea & Soda </div>
+        <div class="menu-title"> Oatmeal & Pastries</div>
+
+        <div class="menu-item"><span class="name">Oatmeal w/ milk</span><span class="price">4.50</span></div>
+        <div class="menu-item"><span class="name">Assorted Muffins
+        </span><span class="price"> 3.99</span></div>
+        <div class="menu-item"><span class="name">Toast(2)
+        </span><span class="price">2.25 </span></div>
+        <div class="menu-item"><span class="name">Croissant
+        </span><span class="price">2.92</span></div>
+        <div class="menu-item"><span class="name">  Raisin Toast  </span><span class="price">2.25 </span></div>
+     
+        <div class="menu-item"><span class="name">Two Biscuits</span><span class="price">2.95</span></div>
+        <div class="menu-item"><span class="name">  English Muffin</span> <span class="price">2.45</span></div>
+        <div class="menu-title"> Kids Corner</div>
+        <p class="note">Ages 12 & under served with a small beverage</p>
+
+        <div class="menu-item"><span class="name">Silver Dollar pancakes or (1) French toast 
+          served with two slices of bacon or sausage link or patty.</span><span class="price">6.99</span></div>
+        <div class="menu-item"><span class="name">Two eggs, any style, with two slices of bacon or sausage link or patty.
+        </span><span class="price"> 6.99</span></div>
+        
+    
+        </div>
+       
+        </div>
+        </div>
+        
+
+        </div>
+      </div>
+    </div>
+      
+    </div>
+        </div>
+  </div>
+  </div>
+      
+     
+  
+
+        </div>
+    
+ 
+  </div>
+  </div>
+  
+
+   
+  </div>
+</body>
+</html>  
